@@ -1,0 +1,92 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>祝我心爱的女孩生日快乐~</title>
+<link href="css/style.css" type="text/css" rel="stylesheet">
+<script src="js/jquery.js"></script>
+<script src="js/garden.js"></script>
+<script src="js/functions.js"></script>
+</head>
+<body>
+<div id="mainDiv">
+<div id="content">
+<div id="code">
+<span class="comments">祝我亲爱的、心爱的、可爱的、酷酷的、笑起来超好看的<br />女孩、宝宝、小公主、老婆大人生日快乐天天开心～</span><br /><br /><span class="comments">
+时间过得真快，一年了也～<br />
+以前是暗恋你，<br />
+现在是“明目张胆”地爱你，啊哈哈哈<br />
+虽然我不止一次让你觉得呆呆的，<br />
+虽然没少惹你生气，<br />
+虽然我们因为这样那样原因不能常常不能见面，<br />
+但是很高兴，你我依旧在对方身边。<br />
+不管怎样，我会继续认真爱你。<br />
+你走你所想的路，<br />
+我静静伴你同行。<br />
+</span><br /><br />
+<span class="comments">一首毛不易的《给你给我》予你，
+祝你生日快乐，不止生日～</span><br />
+<br><br>
+<span class="comments"><b class="bb">——爱你的lrt</b></span>
+</div>
+<div id="loveHeart">
+<canvas id="garden"></canvas>
+<div id="words">
+<div id="messages">
+<img src="images/zsr.png">
+</div>
+<div id="loveu">
+<img src="images/sr.png">
+</div>
+</div>
+</div>
+</div>
+<div id="copyright">
+<center>
+<audio id="main_audio" autoplay="autoplay" preload="auto" loop>
+<source src="resource/毛不易-给你给我.mp3" type="audio/mpeg" />
+<embed id="main_audio_ie8" hidden="true" autostart="true" height="0" width=0 loop="true" src="resource/毛不易-给你给我.mp3" autoplay="autoplay" />
+</audio>
+<!--音乐请替换上面两个地址 http://other.web.ra01.sycdn.kuwo.cn/resource/n3/47/55/72304795.mp3 -->
+<a class="c-white fs-12 icon-play rotate" id="btn-play" href="javascript:void(0);"></a>
+</div>
+</center>
+</div>
+</div>
+<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setHours(8);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "您的浏览器已经过时!请使用非IE浏览器进行预览"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</div>
+</div>
+</body>
+</html>
