@@ -54,7 +54,18 @@ function startHeartAnimation(){
 seconds=seconds%3600;var minutes=Math.floor(seconds/60);if(minutes<10){minutes="0"+minutes;}
 seconds=seconds%60;if(seconds<10){seconds="0"+seconds;}
 var result=" ";$("#elapseClock").html(result);}
-function showMessages(){adjustWordsPosition();$('#messages').fadeIn(5000,function(){showLoveU();});}
-function adjustWordsPosition(){$('#words').css("position","absolute");$('#words').css("top",$("#garden").position().top+195);$('#words').css("left",$("#garden").position().left+70);}
+function showMessages(){
+	adjustWordsPosition();
+	$('#messages').fadeIn(5000,function(){
+		showLoveU();
+	});
+}
+function adjustWordsPosition(){
+	$('#words').css("position","absolute");
+	$('#words').css("top",$("#garden").position().top+195);
+	if(window.screen.availWidth>768){
+		$('#words').css("left",$("#garden").position().left+70);
+	}
+}
 function adjustCodePosition(){$('#code').css("margin-top",($("#garden").height()-$("#code").height())/2);}
 function showLoveU(){$('#loveu').fadeIn(3000);}

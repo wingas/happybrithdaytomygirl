@@ -27,7 +27,7 @@
 我可能不够优秀，但我愿给你我微不足道所有的所有。<br />
 愿你每天都是灿烂无比的初春和深秋，<br />
 祝你——我心爱的女孩，生日快乐，不止生日～</span><br />
-<br><br>
+<br/>
 <span class="comments"><b class="bb">——爱你的lrt</b></span>
 </div>
 <div id="loveHeart">
@@ -89,7 +89,17 @@
 				"width":"100%",
 				"height":"100%"
 			});
+			
+			$("#words").css("width","100%");
+			$("#words").css("left","0px");
+			$("#mesages").css("margin-left","0px");
+			$("#loveu").css("margin-left","0px");
+			
 		});
+		/*$("#messages[style]").on('load', function() {
+			// Code to be executed after the image is loaded
+			console.log($("#words").html());
+		});*/
 	}
 	else{
 		
@@ -115,9 +125,9 @@
 
 			if(window.screen.availWidth>768){
 				adjustCodePosition();
-			}
-			if(window.screen.availWidth>768){
 				$("#code").typewriter();
+			}
+			else{
 			}
 		}
 
