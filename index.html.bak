@@ -25,7 +25,7 @@
 <span class="comments">一首毛不易的《给你给我》予你，
 无论喜悦忧愁，我想一直成为那个能被你分享的人。<br />
 我可能不够优秀，但我愿给你我微不足道所有的所有。<br />
-愿你每天都是灿烂无比的初春和深秋，<br />
+愿你每天都是灿烂无比的初春和深秋，
 祝你——我心爱的女孩，生日快乐，不止生日～</span><br />
 <br><br>
 <span class="comments"><b class="bb">——爱你的lrt</b></span>
@@ -66,30 +66,16 @@
 		//移动端
 		
 		$("body").css("background","url(./images/background2.jpg)");
-
-		$(document).ready(function(){
-			$("#content").css({
-				"margin-top":"200px",
-				"margin-left":"auto",
-				"margin-right":"auto",
-				"width":"90%",
-				"text-align":"center"
-			});
-			$("#content").css("margin-left","auto");
-			$("#code").css({
-				"height":"900px",
-				"font-size":"30px",
-				"line-height":"45px",
-				"width":"100%",
-				"text-align":"center"
-			});
-			$("#code").typewriter();
-			$("#loveHeart").css({
-				"padding-top":"50px",
-				"width":"100%",
-				"height":"100%"
-			});
+		/*$("#content").css({
+			"margin-top":"300px",
+			"margin-left":"100px"
 		});
+		$("#code").css({
+			"height":"1440px",
+			"font-size":"50px",
+			"line-height":"70px",
+			"width":"100%"
+		});*/
 	}
 	else{
 		
@@ -116,12 +102,8 @@
 			if(window.screen.availWidth>768){
 				adjustCodePosition();
 			}
-			if(window.screen.availWidth>768){
-				$("#code").typewriter();
-			}
+			$("#code").typewriter();
 		}
-
-		
 	</script>
 </div>
 </div>
